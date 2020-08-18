@@ -10,7 +10,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @ComponentScan("recipesPack")
 public class Config {
     @Bean
-    public DriverManagerDataSource dataSource() {
+    public DriverManagerDataSource dataSource() throws ClassNotFoundException {
+        Class.forName("org.h2.Driver");
         return new DriverManagerDataSource("jdbc:h2:~/test", "sa", "");
     }
 }

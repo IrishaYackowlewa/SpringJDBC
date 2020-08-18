@@ -22,4 +22,13 @@ public class Recipe {
     public String getRecipe() {
         return recipe;
     }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", recipe='" + recipe + '\'' +
+                '}';
+    }
 }
