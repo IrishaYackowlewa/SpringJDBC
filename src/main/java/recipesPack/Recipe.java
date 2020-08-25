@@ -1,12 +1,16 @@
 package recipesPack;
 
 public class Recipe {
-    private final int id;
+    private int id;
     private final String description;
     private final String recipe;
 
     public Recipe(int id, String description, String recipe) {
         this.id = id;
+        this.description = description;
+        this.recipe = recipe;
+    }
+    public Recipe(String description, String recipe) {
         this.description = description;
         this.recipe = recipe;
     }
